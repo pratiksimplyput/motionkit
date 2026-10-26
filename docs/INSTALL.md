@@ -17,3 +17,7 @@ If the panel is missing, check extension folder nesting, manifest host range, ru
 Selecting a layer targets all its compatible rectangle paths, including nested groups. Selecting properties narrows the scope to those properties/groups; an unrelated selected property does not silently target the whole layer. Hidden but selected unlocked layers are eligible. Locked layers, Bezier/ellipse/star paths, animated roundness, and any nonempty roundness expression (even disabled) are skipped. `Set to 0` affects the current eligible selection, not a saved snapshot. Counts describe paths or explicitly skipped items, not a universal count of every property in a layer.
 
 The preview is illustrative; it does not read artwork or show actual AE geometry. Maximum input is 1,000 px. No external network requests, analytics, or fonts are used by the panel.
+
+## Mac development installer
+
+Run `python3 scripts/package_mac.py` to produce `dist/MotionKit-Mac-Installer-0.1.0.zip`. Extract it and run `Install MotionKit.command`. It preserves an existing install in a dated backup and enables unsigned CEP loading for runtimes 11 and 12 (shared preferences affecting other panels). This is an unsigned development convenience, not a signed/notarized PKG. macOS execution and AE 26 loading remain unverified. See the included READ ME for Gatekeeper handling and uninstall instructions.
