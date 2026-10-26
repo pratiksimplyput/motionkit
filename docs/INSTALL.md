@@ -21,3 +21,7 @@ The preview is illustrative; it does not read artwork or show actual AE geometry
 ## Mac development installer
 
 Run `python3 scripts/package_mac.py` to produce `dist/MotionKit-Mac-Installer-0.1.0.zip`. Extract it and run `Install MotionKit.command`. It preserves an existing install in a dated backup and enables unsigned CEP loading for runtimes 11 and 12 (shared preferences affecting other panels). This is an unsigned development convenience, not a signed/notarized PKG. macOS execution and AE 26 loading remain unverified. See the included READ ME for Gatekeeper handling and uninstall instructions.
+
+## ZXP build
+
+GitHub Actions → Build Mac ZXP runs checks, signs on macOS using Adobe's official ZXPSignCmd 4.1.3 from a pinned source commit, verifies the package, and uploads `MotionKit-Mac-ZXP`. Download the workflow artifact and extract its ZXP. Quit AE and use a compatible ZXP extension installer to install it. Do not rename a ZIP to ZXP. The certificate is an ephemeral self-signed development identity, not a verified publisher certificate. This packaging step does not validate AE 26 loading or functionality. The signing key is not published or retained; production releases need a persistent, securely managed signing identity.
