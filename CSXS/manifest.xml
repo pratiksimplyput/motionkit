@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionManifest Version="7.0" ExtensionBundleId="com.simplyput.motionkit" ExtensionBundleVersion="0.1.0" ExtensionBundleName="MotionKit">
+  <ExtensionList><Extension Id="com.simplyput.motionkit.panel" Version="0.1.0"/></ExtensionList>
+  <ExecutionEnvironment>
+    <HostList><Host Name="AEFT" Version="[24.0,26.9]"/></HostList>
+    <LocaleList><Locale Code="All"/></LocaleList>
+    <RequiredRuntimeList><RequiredRuntime Name="CSXS" Version="11.0"/></RequiredRuntimeList>
+  </ExecutionEnvironment>
+  <DispatchInfoList><Extension Id="com.simplyput.motionkit.panel"><DispatchInfo>
+    <Resources><MainPath>./panel/index.html</MainPath><ScriptPath>./host/roundness.jsx</ScriptPath></Resources>
+    <Lifecycle><AutoVisible>true</AutoVisible></Lifecycle>
+    <UI><Type>Panel</Type><Menu>MotionKit</Menu><Geometry><Size><Width>360</Width><Height>620</Height></Size><MinSize><Width>280</Width><Height>420</Height></MinSize></Geometry></UI>
+  </DispatchInfo></Extension></DispatchInfoList>
+</ExtensionManifest>
